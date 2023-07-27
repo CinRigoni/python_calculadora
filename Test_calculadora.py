@@ -25,3 +25,11 @@ def test_resta(a, b, res):
 def test_multiplicacion(a, b, res):
     assert multiplicacion(a, b) == res
 
+@pytest.mark.parametrize("a, b, res",[
+    (4,2,2),
+    (-6,2,-3),
+    (-5,-1,5),
+    (3,0,"No se puede dividir por 0!")
+])
+def test_division(a, b, res):
+    assert division(a, b) == res
