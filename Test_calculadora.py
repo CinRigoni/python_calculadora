@@ -16,3 +16,12 @@ def test_suma(a, b, res):
 ])
 def test_resta(a, b, res):
     assert resta(a, b) == res
+
+@pytest.mark.parametrize("a, b, res",[
+    (2,4,8),
+    (-4,6,-24),
+    (-5,-1,5),
+])
+def test_multiplicacion(a, b, res):
+    assert multiplicacion(a, b) == res
+
