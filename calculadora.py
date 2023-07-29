@@ -28,7 +28,8 @@ def division(a, b):
         return (a/b)
 
 #MENU
-
+'''Usamos TRUE en la cabecera del ciclo, porque terminaremos su ejecucion
+con la sentencia BREAK'''
 while True:
 
     '''Mostramos al usuario las operaciones que puede realizar'''
@@ -45,13 +46,13 @@ while True:
         num2 = float(input('Ingrese el segundo número a operar: '))
 
         if opcion == '1':
-            print(f'{num1} + {num2} = SUMA')
+            print(f'{num1} + {num2} = {suma(num1, num2)}')
         elif opcion == '2':
-            print(f'{num1} - {num2} = RESTA')
+            print(f'{num1} - {num2} = {resta(num1, num2)}')
         elif opcion == '3':
-            print(f'{num1} * {num2} = MULTIPLICACION')
+            print(f'{num1} * {num2} = {multiplicacion(num1, num2)}')
         elif opcion == '4':
-            print(f'{num1} / {num2} = DIVISION')
+            print(f'{num1} / {num2} = {division(num1, num2)}')
 
     else:
         print('Opción inválida.')
@@ -59,7 +60,8 @@ while True:
     '''Condicion de salida'''
     salir = input('Queres seguir operando? Para salir ingrese la letra X, de lo contrario ingrese cualquier letra: ')
 
-    if salir == 'X' or salir == 'x':
-        break
+    '''Usamos upper() para realizar solo 1 comparacion de la condicion'''
+    if salir.upper() == 'X':
+        break #Break termina la ejecucion del ciclo
     else:
-        continue
+        continue #Continue permite seguir la ejecucion del ciclo
